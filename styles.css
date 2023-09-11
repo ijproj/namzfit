@@ -1,0 +1,151 @@
+body {
+  font-family: tahoma;
+  padding: 20px;
+  height: max-height;
+}
+
+h1 {
+    font-family: rockwell;
+    text-align: center;
+}
+
+.menu {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.banner {
+    /* The image used */
+    background-image: url(https://unsplash.com/photos/Yuv-iwByVRQ);
+
+  }
+
+.main-img {
+    background-color: black;
+    padding: auto;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+  border: 2px solid white;
+  background-color: #D2D2CF;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: auto;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn:link {
+    text-decoration: none;
+}
+
+
+.menu:visited {
+ text-decoration: none;
+}
+
+h2.header {
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.menu:active {
+ text-decoration: none;
+ color: black;
+ opacity: 0.3;
+}
+
+input {
+height: 20%;
+width: 80%;
+padding: 14px 10px;
+margin: 20px auto;
+display: block;
+
+}
+
+input[type="submit"] {
+width: 40%;
+height: 20%;
+
+}
+
+fieldset {
+border: none;
+height: 80%;
+}
+
+/* #banner {
+  background-color: #D2D2CF;
+  border-color: black;
+  display: flex;
+} */
+
+/* #monthHeader div {
+  display: flex;
+  text-align: center;
+  margin: auto;
+} */
+
+#weekday {
+width: 100%;
+color: grey;
+display: flex;
+margin: auto;
+padding: top 10px;
+}
+
+#weekday div {
+  width: 100px;
+  padding: 30px;
+  text-align: center;
+}
+
+.day, .padding {
+  width: 14.26%;
+  height: 8%;
+  border-color: #D2D2CF;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  float: left;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.day:hover {
+  background-color: #e8faed;
+}
+
+.day:active {
+  background-color: #e8faed;
+}
+
+.day {
+  color: black;
+}
+
+.padding {
+  border-color: #D2D2CF;
+  color: #D2D2CF;
+}
