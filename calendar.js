@@ -24,7 +24,18 @@ const weekday = ['Monday',
                  'Saturday', 
                  'Sunday'];
 
+function selected(id){
+    
+    const lastClicked = document.getElementsByClassName("clicked")
+    if(lastClicked.length != 0){
+        lastClicked[0].classList.remove('clicked')
+    }
+    document.getElementById(id).classList.add('clicked')
+    
+}
+
 function loadCalendar() {
+    calendar.innerHTML =""
     const today = new Date();
     const day = today.getDay();
    
@@ -49,19 +60,20 @@ function loadCalendar() {
     const paddingDays = weekday.indexOf(dateString.split(', ')[0]);
 
     for(let i = 1; i <= 42; i++) {
-        let checkElement = document.getElementById(i);
+        const dayString = `${i - paddingDays}/${month + 1}/${year}`;
+        let checkElement = document.getElementById(dayString);
         if(checkElement == null) {
             var daySquare = document.createElement('div');
-            daySquare.setAttribute("id", i);
+            daySquare.setAttribute("id", dayString);
             calendar.appendChild(daySquare);
         }
         else {
-            var daySquare = document.getElementById(i);
+            var daySquare = document.getElementById(dayString);
             daySquare.classList.remove("padding");
             daySquare.classList.remove("day");
         }
 
-
+        daySquare.classList.add('square');
         if (i <= paddingDays) {
             daySquare.classList.add('padding');
             daySquare.innerText = noDaysInPrevMonth + i - paddingDays;
@@ -70,12 +82,15 @@ function loadCalendar() {
         else if (i - paddingDays <= noDaysInMonth){
             daySquare.classList.add('day');
             daySquare.innerText = i - paddingDays;
+            document.getElementById(dayString).addEventListener('click', () => selected(id=dayString)
+            )
         }
 
         else {
             daySquare.classList.add('padding');
             daySquare.innerText = i - noDaysInMonth - paddingDays;
         }
+        
         
     }
 

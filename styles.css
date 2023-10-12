@@ -149,3 +149,11 @@ padding: top 10px;
   border-color: #D2D2CF;
   color: #D2D2CF;
 }
+
+.clicked {
+  background-color: #8eb9b9;
+}
+
+.clicked:hover {
+  background-color: #8eb9b9;
+}
